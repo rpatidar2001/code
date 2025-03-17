@@ -1,0 +1,51 @@
+http://localhost:3000/api/signup
+input ={
+    "first_name":"rahul",
+    "last_name":"patidar",
+    "email":"rahulhere741525@gmail.com",
+    "password":"rahul@1234"
+}
+output= {
+    "message": "user created successfully",
+    "userId": 1
+}
+
+
+
+
+http://localhost:3000/api/login
+input = {
+    "email":"rahulhere741525@gmail.com",
+    "password":"rahul@1234"
+}
+output= {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYWh1bGhlcmU3NDE1MjVAZ21haWwuY29tIiwiaWF0IjoxNzQyMjE1MzQxLCJleHAiOjE3NDIyMTg5NDF9.TpuVpvYqwfdsQ6e5x7OLRySQbC_7tJo4CjRTNCeCBcw"
+}
+
+
+http://localhost:3000/api/getUser?id=1
+{
+    "id": 1,
+    "first_name": "rahul",
+    "last_name": "patidar",
+    "email": "rahul123@gmail.com",
+    "password": "$2b$10$v1U11BTUQ9gytrXnlC7GE.Xk8H3KxMbsSBex7aoJ5Apr5ayGapcGy"
+}
+
+http://localhost:3000/api/forget-password
+{
+    "email":"rahulhere741525@gmail.com"
+}
+{
+    "message": "password reset email sent",
+    "resetLink": "http://localhost:3000/api/reset-password?token=15b6bc580ff500d29994fe7d81e9e551bcaa4ba2e79844e08edd6161400570f5"
+}
+
+
+http://localhost:3000/api/reset-password
+input = {   "token":"15b6bc580ff500d29994fe7d81e9e551bcaa4ba2e79844e08edd6161400570f5",
+    "newPassword":"rahul@1234"
+}
+{
+    "message": "Password reset successfully"
+}
